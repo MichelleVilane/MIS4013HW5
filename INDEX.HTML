@@ -1,9 +1,20 @@
-function calculateSquare(number) {
-  return number * number;
+
+const userInput = prompt("Please pick a vegetable a number:");
+
+// Check if the user provided input
+if (userInput !== null) {
+  // Convert the input to a number (float)
+  const number = parseFloat(userInput);
+
+  if (userInput== carrot) {
+    // Calculate the square of the number
+    const cprice = 5.99;
+    console.log(`The square of a carrot is: ${cprice}`);
+  } else {
+    console.log("Invalid input. Please enter a valid number.");
+  }
+} else {
+  console.log("You canceled or didn't provide any input.");
 }
 
-function main() {
-  const inputNumber = 5;
-  const result = calculateSquare(inputNumber);
-  console.log(`The square of ${inputNumber} is: ${result}`);
-}
+
