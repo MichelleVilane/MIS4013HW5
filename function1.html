@@ -38,8 +38,8 @@
         }
 
         function doAll() {
-            const input1 = parseInterger(document.getElementById("input1").value);
-            const input2 = parseInterger(document.getElementById("input2").value);
+            const input1 = parseFloat(document.getElementById("input1").value);
+            const input2 = parseFloat(document.getElementById("input2").value);
 
             if (!isNaN(input1) && !isNaN(input2)) {
                 const sum = add(input1, input2);
