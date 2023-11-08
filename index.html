@@ -1,25 +1,65 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  </head>
-  <body>
-    <div class="container">
-    <h1>Index</h1>
-      <button type="button" class="btn btn-secondary"> <a href= "function1.html">Accordion Page </a></button>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Operations</title>
+</head>
+<body>
+    <h1> Operations</h1>
+    <p>Please enter 2 numbers and our system will perform simple operations:</p>
 
-      <br></br>
-       <button type="button" class="btn btn-secondary"><a href= "Card.html"> Card Page </a></button>
-      <br></br>
-      <button type="button" class="btn btn-secondary"><a href= "List.html"> List Page </a></button>
-      <br></br>
-      <button type="button" class="btn btn-secondary"><a href= "Purchase Form.html"> Form Page </a></button>
-  </body>
-  </div>
+    <input type="number" id="input1" placeholder="Please enter a number">
+    <input type="number" id="input2" placeholder="Please enter another number">
+    <button onclick="doAll()">Calculate</button>
 
-  </body>
+    <div id="result"></div>
+
+    <script>
+       
+        function add(num1, num2) {
+            return num1 + num2;
+        }
+        function subtract(num1, num2) {
+            return num1 - num2;
+        }
+
+        function multiply(num1, num2) {
+            return num1 * num2;
+        }
+       
+
+        function divide(num1, num2) {
+            if (num2 !== 0) {
+                return num1 / num2;
+            } else {
+                return "You can't divide by zero, please try again";
+            }
+        }
+
+        function doAll() {
+            const input1 = parseFloat(document.getElementById("input1").value);
+            const input2 = parseFloat(document.getElementById("input2").value);
+
+                 if (!isNaN(input1) && !isNaN(input2))  {
+                const sum = add(input1, input2);
+                const difference = subtract(input1, input2);
+                const product = multiply(input1, input2);
+                const division = divide(input1, input2);
+              
+
+              const resultMessage = `
+                    Sum: ${sum}<br>
+                    Difference: ${difference}<br>
+                    Product: ${product}<br>
+                    Quotient: ${division}
+                `;
+
+                document.getElementById("result").innerHTML = resultMessage;
+            } else {
+                document.getElementById("result").innerHTML = "Please enter valid numbers.";
+            }
+        }
+    </script>
+</body>
 </html>
