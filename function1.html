@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1> Operations</h1>
-    <p>Enter two numbers to perform arithmetic operations:</p>
+    <p>Please enter 2 numbers and our system will perform simple operations:</p>
 
     <input type="number" id="input1" placeholder="Please enter a number">
     <input type="number" id="input2" placeholder="Please enter another number">
@@ -20,7 +20,6 @@
         function add(num1, num2) {
             return num1 + num2;
         }
-  
         function subtract(num1, num2) {
             return num1 - num2;
         }
@@ -33,7 +32,7 @@
             if (num2 !== 0) {
                 return num1 / num2;
             } else {
-                return "Cannot divide by zero";
+                return "You can't divide by zero, please try again";
             }
         }
 
