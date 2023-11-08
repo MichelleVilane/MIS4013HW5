@@ -6,8 +6,8 @@
     <title> Operations</title>
 </head>
 <body>
-    <h1> Operations</h1>
-    <p>Please enter 2 numbers and our system will perform simple operations:</p>
+    <h1> Math Operations</h1>
+    <p>Hi Dr Bellah,please enter 2 numbers and our system will perform simple operations:</p>
 
     <input type="number" id="input1" placeholder="Please enter a number">
     <input type="number" id="input2" placeholder="Please enter another number">
@@ -41,21 +41,21 @@
             const input1 = parseFloat(document.getElementById("input1").value);
             const input2 = parseFloat(document.getElementById("input2").value);
 
-                 if (!isNaN(input1) && !isNaN(input2))  {
-                const sum = add(input1, input2);
-                const difference = subtract(input1, input2);
-                const product = multiply(input1, input2);
-                const division = divide(input1, input2);
+         if (!isNaN(input1) && !isNaN(input2))  {
+             const sum = add(input1, input2);
+            const difference = subtract(input1, input2);
+            const product = multiply(input1, input2);
+            const division = divide(input1, input2);
               
 
-              const resultMessage = `
+              const resultStr = `
                     Sum: ${sum}<br>
                     Difference: ${difference}<br>
                     Product: ${product}<br>
                     Quotient: ${division}
                 `;
 
-                document.getElementById("result").innerHTML = resultMessage;
+                document.getElementById("result").innerHTML = resultStr;
             } else {
                 document.getElementById("result").innerHTML = "Please enter valid numbers.";
             }
