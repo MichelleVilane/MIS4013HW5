@@ -41,7 +41,7 @@
             const input1 = parseFloat(document.getElementById("input1").value);
             const input2 = parseFloat(document.getElementById("input2").value);
 
-            if (input1 !== null && input2 !== null) {
+                 if (!isNaN(input1) && !isNaN(input2))  {
                 const sum = add(input1, input2);
                 const difference = subtract(input1, input2);
                 const product = multiply(input1, input2);
