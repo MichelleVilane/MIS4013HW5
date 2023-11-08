@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -8,13 +8,12 @@
   </head>
   <body>
     <div class="container">
-      <br></br>
-    <div class="text-bg-secondary p-3"><h1>FUNCTION 1</h1></div>
+      <br><br>
+      <div class="text-bg-secondary p-3"><h1>FUNCTION 1</h1></div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
     <script>
-      const userInput = prompt("Please enter a number:");
-
         // Function to add two numbers
         function addNumbers(num1, num2) {
             return num1 + num2;
@@ -39,6 +38,19 @@
             }
         }
 
+        // Main function to use the above functions
+        function main() {
+            const userInput = prompt("Please enter a number:");
+            const number1 = parseFloat(userInput);
+            const number2 = 5;
+
+            if (!isNaN(number1)) {
+                performArithmeticOperations(number1, number2);
+            } else {
+                console.log("Invalid input. Please enter a valid number.");
+            }
+        }
+
         // Function to perform all arithmetic operations
         function performArithmeticOperations(num1, num2) {
             const sum = addNumbers(num1, num2);
@@ -52,18 +64,9 @@
             console.log(`Quotient: ${quotient}`);
         }
 
-        // Main function to use the above functions
-        function main() {
-            const number1 = ${userInput};
-     
-
-            performArithmeticOperations(number1, number2);
-        }
-
         // Call the main function to run the program
         main();
     </script>
-</body>
+  </body>
 </html>
-      
    
